@@ -77,6 +77,11 @@ h1.title {
   line-height: normal;
   font-weight: 700;
 }
+h1.successTitle {
+  font-size: clamp(1rem, 2.6vw, 3rem);
+  line-height: normal;
+  font-weight: 700;
+}
 
 p.subtitle {
   font-size: clamp(0.7em, 0.8vw, 1em);
@@ -84,7 +89,7 @@ p.subtitle {
   margin-bottom: 1em;
 }
 p.successSubtitle {
-  font-size: clamp(1.3em, 2.8vw, 2.3em);
+  font-size: clamp(1em, 2vw, 1.3em);
   line-height: 1.4em;
 }
 
@@ -183,6 +188,11 @@ button.submit:hover {
     font-size: clamp(0.5em, 0.8vw, 1em);
     line-height: 1.2em;
     margin-bottom: 1em;
+  }
+
+  p.successSubtitle {
+    font-size: clamp(0.6em, 0.8vw, 1em);
+    line-height: 1em;
   }
 
   ul.subscriptionInfos {
