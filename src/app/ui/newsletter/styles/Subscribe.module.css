@@ -1,0 +1,147 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  color: aliceblue;
+  background-color: rgb(9, 36, 86);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.card {
+  width: 90%;
+  max-width: 1365px;
+  margin: 50px;
+  margin-bottom: 120px;
+  background-color: #000000;
+  padding: 80px 94px;
+  border-radius: 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.formContainer {
+  flex: 1;
+  padding: 50px;
+  min-width: 523px;
+  max-width: 523px;
+  z-index: 2;
+}
+
+.blueBlur {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.blueBlur::after {
+  content: "";
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(110px);
+  background: #0056b3;
+  z-index: 1;
+}
+
+h1.title {
+  font-size: 2.3em;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+p.subtitle {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+ul.subscriptionInfos {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+li.subscriptionInfoItem {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.checkmark {
+  fill: #00a3ff;
+  margin-right: 10px;
+  align-self: center;
+}
+
+label.emailLabel {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+input.emailInput {
+  width: 100%;
+  padding: 17px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  color: #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+input.emeilInput:focus {
+  outline: #165cde;
+}
+
+button.submit {
+  margin-top: 40px;
+  padding: 17px;
+  width: 100%;
+  background-color: #165cde;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+button.submit:hover {
+  background-color: #0056b3;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+.imageContainer.ilustration {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.logo {
+  margin-top: -90px;
+  text-align: center;
+  opacity: 0.74;
+}
