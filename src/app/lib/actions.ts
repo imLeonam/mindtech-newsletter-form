@@ -12,7 +12,7 @@ const NewsletterFormSchema = z.object({
     .string({
       message: "Esta campo é obrigatório!",
     })
-    .email(),
+    .email({ message: "Email inválido!" }),
 });
 
 export type State = {
@@ -70,4 +70,25 @@ export async function createNewsletterRegister(
 
   revalidatePath("/newsletter/subscribe/success");
   redirect("/newsletter/subscribe/success");
+}
+
+export async function deleteNewsletterRegister(id: string) {
+  const subscriber = await prisma.newsletterSubscriptions.findUnique({
+    where: { id: id },
+  });
+
+  if (!subscriber)
+    return {
+      errors: [
+        "E-mail não encontrado. Erro ao tentar desinscrever da Newsletter.",
+      ],
+      message: "Erro ao tentar desinscrever da Newsletter.",
+    };
+
+  try {
+    await prisma.newsletterSubscriptions.delete({ where: { id: id } });
+    return { success: true };
+  } catch (e) {
+    return { message: "DataBase Error: Falha ao remover email da Newsletter" };
+  }
 }
