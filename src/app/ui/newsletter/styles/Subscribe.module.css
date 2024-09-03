@@ -98,15 +98,14 @@ input.emailInput {
   padding: 17px;
   margin-top: 10px;
   border-radius: 10px;
-  border: none;
-  outline: none;
   background-color: #f0f0f0;
   color: #000000;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
 }
 
-input.emeilInput:focus {
-  outline: #165cde;
+input.emailInput:focus {
+  transition: all 0.2s ease-out;
+  outline: solid 4px #165cde;
 }
 
 button.submit {
@@ -124,6 +123,13 @@ button.submit {
 
 button.submit:hover {
   background-color: #0056b3;
+  outline: solid 3px white;
+  transition: all 0.2s ease-out;
+}
+button.submit:focus {
+  background-color: #0056b3;
+  outline: solid 3px white;
+  transition: all 0.2s ease-out;
 }
 
 .imageContainer {
