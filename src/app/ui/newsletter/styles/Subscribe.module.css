@@ -17,6 +17,8 @@
   width: 90%;
   max-width: 1365px;
   margin: 50px;
+  min-height: 900px;
+  height: fit-content;
   margin-bottom: 120px;
   background-color: #000000;
   padding: 80px 94px;
@@ -25,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
 }
 
@@ -34,6 +36,13 @@
   padding: 50px;
   min-width: 523px;
   max-width: 523px;
+  z-index: 2;
+}
+.formContainerSuccess {
+  flex: 1;
+  padding: 50px;
+  min-width: 523px;
+  max-width: 616px;
   z-index: 2;
 }
 
@@ -60,12 +69,18 @@
 h1.title {
   font-size: 2.3em;
   margin-bottom: 40px;
+  line-height: normal;
   font-weight: 700;
 }
 
 p.subtitle {
   font-size: 1em;
   line-height: 1.5;
+}
+p.successSubtitle {
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-top: -20px;
 }
 
 ul.subscriptionInfos {
@@ -126,11 +141,6 @@ button.submit:hover {
   outline: solid 3px white;
   transition: all 0.2s ease-out;
 }
-button.submit:focus {
-  background-color: #0056b3;
-  outline: solid 3px white;
-  transition: all 0.2s ease-out;
-}
 
 .imageContainer {
   display: flex;
@@ -142,12 +152,14 @@ button.submit:focus {
 }
 
 .imageContainer.ilustration {
-  max-width: 100%;
+  max-width: 600;
   border-radius: 10px;
 }
 
 .logo {
-  margin-top: -90px;
+  margin-top: -5vw;
   text-align: center;
+  width: 13vw;
+  max-width: 200;
   opacity: 0.74;
 }
