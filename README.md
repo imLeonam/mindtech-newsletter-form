@@ -26,4 +26,9 @@ yarn dev
 
 Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
+### Para fazer o teste de desinscrição:
+
+Eu pensei em mandar junto dos emails de newsletter uma anchor, que contenha um campo de parâmetro do email no banco de dados, como por exemplo, o id.
+Ao clicar neste link ele é redirecionado para a rota [http://localhost:3000/newsletter/unsubscribe/id](http://localhost:3000/newsletter/unsubscribe/id) onde será feita a desinscrição da newsletter.
+
 Este projeto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) pra optimizar e carregar automaticamente a Inter, uma fonte customizada do Google Font.
