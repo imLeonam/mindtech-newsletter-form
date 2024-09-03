@@ -31,7 +31,7 @@ export default function Form() {
           <div className="relative">
             <input
               className={`${style.emailInput} border text-md border-gray-200 outline-2 placeholder:text-gray-300`}
-              type="email"
+              type="text"
               id="email"
               name="email"
               placeholder="email@email.com"
