@@ -25,19 +25,20 @@ export default async function Page({ params }: Props) {
       <div className={`${style.card} animate-slideInRight`}>
         <div className={style.blueBlur} />
         <div
-          className={`${style.formContainerSuccess} text-start flex justify-center flex-wrap`}
+          className={`text-start flex flex-1 lg:p-10 sm:w-3/4 lg:w-3/5 items-center justify-center flex-col flex-wrap z-10`}
         >
           <Image
+            className="sm:p-10 lg:w-64"
             width={250}
             height={250}
             src={"/sadFaceIcon.svg"}
             alt="check"
           />
-          <h1 className={`${style.title} ${inter} mt-10`}>
-            Você se inscreveu <br />
-            da nossa newsletter.
+          <h1 className={`${style.successTitle} ${inter} mt-10 mb-5`}>
+            Você se desinscreveu <br className="sm:hidden lg:block" /> da nossa
+            newsletter.
           </h1>
-          <p className={style.successSubtitle}>
+          <p className={`${style.successSubtitle} md:w-2/4`}>
             Agora você não faz mais parte da comunidade Mindtech. Você não terá
             mais atualizações sobre as últimas inovações e tendências da
             Internet das Coisas (loT).
