@@ -1,6 +1,6 @@
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 0;
   font-size: 1.1em;
   line-height: 1.2em;
@@ -14,11 +14,10 @@
 }
 
 .card {
-  width: 90%;
+  width: 90dvw;
   max-width: 1365px;
   margin: 50px;
-  min-height: 900px;
-  height: fit-content;
+  height: 80dvh;
   margin-bottom: 120px;
   background-color: #000000;
   padding: 80px 94px;
@@ -31,11 +30,17 @@
   flex-direction: row;
 }
 
+.cardMargin {
+  margin: 0 20;
+}
+
 .formContainer {
   flex: 1;
   padding: 50px;
-  min-width: 523px;
-  max-width: 523px;
+  width: 20dvw;
+  height: 20dvh;
+  /* min-width: 523px;
+  max-width: 523px; */
   z-index: 2;
 }
 .formContainerSuccess {
@@ -67,20 +72,20 @@
 }
 
 h1.title {
-  font-size: 2.3em;
+  font-size: clamp(1.2rem, 2vw, 2.3rem);
   margin-bottom: 40px;
   line-height: normal;
   font-weight: 700;
 }
 
 p.subtitle {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: clamp(0.7em, 0.8vw, 1em);
+  line-height: 1.4em;
+  margin-bottom: 1em;
 }
 p.successSubtitle {
-  font-size: 1.3em;
-  line-height: 1.5;
-  margin-top: -20px;
+  font-size: clamp(1.3em, 2.8vw, 2.3em);
+  line-height: 1.4em;
 }
 
 ul.subscriptionInfos {
@@ -93,25 +98,26 @@ li.subscriptionInfoItem {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  margin: 20px 0;
+  font-size: clamp(0.7em, 0.8vw, 1em);
+  line-height: 1.4em;
+  margin: 1em 0;
 }
 
 .checkmark {
   fill: #00a3ff;
   margin-right: 10px;
   align-self: center;
+  width: 2em;
 }
 
 label.emailLabel {
   display: block;
-  margin-top: 20px;
   font-size: 0.9em;
 }
 
 input.emailInput {
   width: 100%;
   padding: 17px;
-  margin-top: 10px;
   border-radius: 10px;
   background-color: #f0f0f0;
   color: #000000;
@@ -151,8 +157,9 @@ button.submit:hover {
   z-index: 2;
 }
 
-.imageContainer.ilustration {
-  max-width: 600;
+.ilustration {
+  width: 30dvw;
+  max-width: 550px;
   border-radius: 10px;
 }
 
@@ -160,6 +167,68 @@ button.submit:hover {
   margin-top: -5vw;
   text-align: center;
   width: 13vw;
-  max-width: 200;
+  max-width: 200px;
   opacity: 0.74;
+}
+
+@media screen and (max-width: 1024px) {
+  h1.title {
+    font-size: clamp(1rem, 2vw, 2.3rem);
+    margin-bottom: 40px;
+    line-height: normal;
+    font-weight: 700;
+  }
+
+  p.subtitle {
+    font-size: clamp(0.5em, 0.8vw, 1em);
+    line-height: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  ul.subscriptionInfos {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  li.subscriptionInfoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    font-size: clamp(0.5em, 0.8vw, 1em);
+    line-height: 1.2em;
+    margin: 1em 0;
+  }
+
+  .checkmark {
+    fill: #00a3ff;
+    margin-right: 10px;
+    align-self: center;
+    width: 1.4em;
+  }
+
+  label.emailLabel {
+    display: block;
+    font-size: 0.2em;
+  }
+
+  input.emailInput {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: all 0.2s ease-in;
+  }
+
+  button.submit {
+    margin-top: 40px;
+    width: 80%;
+    background-color: #165cde;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.2em;
+    transition: all 0.2s ease-in-out;
+  }
 }
