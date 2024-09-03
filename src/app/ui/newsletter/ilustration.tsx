@@ -4,12 +4,12 @@ import style from "./styles/subscribe.module.css";
 export default function Ilustration() {
   return (
     <>
-      <div className="flex flex-col w-full items-center">
+      <div className="lg:flex flex-col w-full items-center hidden">
         <Image
           src="/Imagem.png"
-          width={600}
+          width={550}
           height={900}
-          className={`${style.ilustration}`}
+          className={style.ilustration}
           alt="IoT"
         />
         <Image
