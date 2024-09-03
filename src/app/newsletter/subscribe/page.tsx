@@ -3,7 +3,7 @@ import style from "@/app/ui/newsletter/styles/Subscribe.module.css";
 import Image from "next/image";
 import { inter } from "@/app/ui/fonts";
 
-function Subscribe() {
+function Page() {
   return (
     <div className={style.container}>
       <div className={style.card}>
@@ -92,4 +92,4 @@ function Subscribe() {
   );
 }
 
-export default Subscribe;
+export default Page;
